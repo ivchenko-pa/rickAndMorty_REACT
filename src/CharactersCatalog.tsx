@@ -9,9 +9,9 @@ export default function CharactersCatalog(props:Readonly<CharactersCatalogProps>
 
 
     return (
-            <div className="CharactersContainer">
+            <div className="characters-container">
                 {
-                    response.filter((response) => response.name.toLowerCase().startsWith(props.filter.toLowerCase())).map((resp) =>
+                    response.filter((character) => character.name.toLowerCase().includes(props.filter.toLowerCase())).map((resp) =>
                         <Character
                             key={resp.id}
                             name={resp.name}

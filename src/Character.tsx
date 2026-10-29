@@ -7,21 +7,10 @@ type CharacterProps = {
     query:string
 }
 
-type CharacterPictureProps = {
-    name: string
-    image: string
-}
-
-type CharacterInfoProps = {
-    gender: string
-    status: string
-    species: string
-}
-
 export default function Character(props: Readonly<CharacterProps>) {
     console.log(props.name, props.image);
     return (
-        <div className="Character">
+        <div className="character">
             <h2>{props.name}</h2>
             <CharacterDetails
                 gender={props.gender}
@@ -39,7 +28,7 @@ export default function Character(props: Readonly<CharacterProps>) {
 function CharacterDetails(props: Readonly<CharacterProps>) {
 
     return (
-        <div className="CharacterDetails">
+        <div className="character-details">
             <CharacterPicture image={props.image} name={props.name}/>
             <CharacterInfo gender={props.gender} status={props.status} species={props.species}/>
 
@@ -48,9 +37,9 @@ function CharacterDetails(props: Readonly<CharacterProps>) {
 
 }
 
-function CharacterInfo(props: Readonly<CharacterInfoProps>) {
+function CharacterInfo(props: Readonly<CharacterProps>) {
     return (
-        <div className="CharacterInfo">
+        <div className="character-info">
             <p>Species: {props.species}</p>
             <p>Gender: {props.gender}</p>
             <p>Status: {props.status}</p>
@@ -58,7 +47,7 @@ function CharacterInfo(props: Readonly<CharacterInfoProps>) {
     )
 }
 
-function CharacterPicture(props: Readonly<CharacterPictureProps>) {
+function CharacterPicture(props: Readonly<CharacterProps>) {
     return (
         <>
             <img src={props.image} alt={props.name}/>

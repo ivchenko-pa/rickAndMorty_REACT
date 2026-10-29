@@ -13,13 +13,13 @@ h1, h2{
     text-align: center;
 }
 
-.Character{
+.character{
     height: 400px;
     width: 500px;
     flex-grow: 0;
 }
 
-.CharactersContainer {
+.characters-container {
     border: 10px solid red;
     margin-inline: auto;
     display: flex;
@@ -28,20 +28,20 @@ h1, h2{
 
 }
 
-.CharacterDetails{
+.character-details{
     border: blue solid 5px;
     display: flex;
     gap: 10px;
 }
 
-.CharacterInfo{
+.character-info{
     border: pink solid 5px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.FilterComponent{
+.filter-component{
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -4,7 +4,7 @@ type FilterComponentProps = {
 
 export default function FilterComponent(props: Readonly<FilterComponentProps>) {
     return (
-        <div className="FilterComponent">
+        <div className="filter-component">
             <input onChange={(e) => props.setFilter(e.target.value)}/>
         </div>
 
